@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower of Hanoi · 3D Learning Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-container">
+    <header>
+        <h1>🗼 3D 汉诺塔</h1>
+        <div class="controls">
+            <label>圆盘数: <input type="number" id="diskCount" min="3" max="8" value="5"></label>
+            <button id="resetBtn">重置</button>
+            <button id="solveBtn">自动求解</button>
+            <span id="moveCounter">移动: 0</span>
+        </div>
+    </header>
+
+    <div class="game-board" id="board"></div>
+
+    <div id="status-bar">点击圆盘 -> 点击柱子移动</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
