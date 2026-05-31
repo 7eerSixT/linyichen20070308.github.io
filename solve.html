@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quadratic Solver</title>
+<script>
+function solve() {
+  let a = prompt("Enter a (a>0):");
+  let b = prompt("Enter b:");
+  let c = prompt("Enter c:");
+
+  a = parseFloat(a);
+  b = parseFloat(b);
+  c = parseFloat(c);
+
+  if (isNaN(a) || isNaN(b) || isNaN(c) || a <= 0) {
+    alert("Invalid input!");
+    return;
+  }
+
+  let delta = b*b - 4*a*c;
+  if (delta < 0) {
+    alert("No real roots!");
+    console.log("No real roots");
+    return;
+  }
+
+  let x1 = (-b + Math.sqrt(delta)) / (2*a);
+  let x2 = (-b - Math.sqrt(delta)) / (2*a);
+
+  alert("Roots:\nx1 = " + x1 + "\nx2 = " + x2);
+  console.log("x1 =", x1);
+  console.log("x2 =", x2);
+}
+</script>
+</head>
+<body onload="solve()">
+  <h1>Quadratic Equation Solver</h1>
+  <p>Check the alert and console for results</p>
+</body>
+</html>
